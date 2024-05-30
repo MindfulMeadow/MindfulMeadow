@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mindfulmeadow"
+    namespace = "com.group49.mindfulmeadow"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.mindfulmeadow"
+        applicationId = "com.group49.mindfulmeadow"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
