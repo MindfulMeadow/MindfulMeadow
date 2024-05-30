@@ -1,4 +1,4 @@
-package com.example.mindfulmeadow.ui.theme
+package com.group49.mindfulmeadow.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

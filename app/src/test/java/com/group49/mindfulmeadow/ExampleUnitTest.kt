@@ -1,4 +1,4 @@
-package com.example.mindfulmeadow
+package com.group49.mindfulmeadow
 
 import org.junit.Test
 
