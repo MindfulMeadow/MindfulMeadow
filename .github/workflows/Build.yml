@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: gradlew test
+        
+  build-artifact:
+    runs-on: ubunto-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@v4.3.3
+
+      - name: Build the artifact
+        run: gradlew assembleDebug
+
+      - name: Upload the artifact
+        uses: actions/upload-artifact@v2
+        with:
+          # Artifact name
+          name: MindfulMeadow-Debug
+          # A file, directory or wildcard pattern that describes what to upload
+          path: app\build\outputs\apk\debug
