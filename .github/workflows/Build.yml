@@ -2,7 +2,7 @@ name: Build project after push
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, pipeline ]
   pull_request:
     branches: [ master ]
 jobs:
